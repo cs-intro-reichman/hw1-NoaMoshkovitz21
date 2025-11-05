@@ -9,6 +9,8 @@ public class TimeFormat {
 		// It concatenates the empty string "" with the leftmost hour-digit. 
 		// It then concatenates the resulting string with the rightmost hour-digit,
 		// and then uses parseInt to cast the resulting string as an int.
+		String hours_s   = ("" + args[0].charAt(0) + args[0].charAt(1));
+		String minutes_s = ("" + args[0].charAt(3) + args[0].charAt(4));
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
@@ -23,6 +25,6 @@ public class TimeFormat {
 
 		}
 
-		System.out.println(hours+":"+minutes+" "+timeformat);
+		System.out.println(hours_s+":"+minutes_s+" "+timeformat);
 	}
 }
